@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: 'Poppins-bolditalic';
+    src: url(assets/fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins-Extra-bold';
+    src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'Poppins-italic';
+    src: url(assets/fonts/Poppins-Italic.ttf);
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'Poppins-ExtraBoldItalics';
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /* primary */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+
+    /* neutral */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+main{
+    height: 100vh;
+    background-color: var(--Off-white) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    width: 500px;
+    max-width: 100%;
+    background-color: var(--White);
+    padding: 2rem;
+    border-radius: 12px 12px 100px 12px;
+    
+}
+@media(max-width:689px){
+   
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    
+     justify-content: center;
+}
+.input-box label{
+    text-transform: uppercase;
+    font-family: 'Poppins-bold',sans-serif;
+    font-size: 14px;
+    color: var(--Smokey-grey);
+}
+.input-box input{
+    max-width: 120px;
+    width: 110%;
+    height: 100%;
+    max-height: 50px;
+    padding:12px 10px  ;
+    outline: 0;
+    box-shadow: 0px 0px 3.8px -2px #000;
+    border: none;
+    border-radius: 4px ;
+    color: #000;
+    font-size: 20px;
+    font-family:'Poppins-bold',sans-serif ;
+}
+:placeholder-shown{
+    color: var(--Light-grey);
+    font-family: 'Poppins-Extra-bold';
+    font-size: 20px;
+}
+.input-box input:is(:focus){
+    border: 1px solid var(--Off-black);
+}
+#form{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--Smokey-grey);
+}
+.row{
+    display: flex;
+    gap: 1.5rem;
+}
+.error{
+    border: 1px solid var(--Light-red);
+}
+.form-btn{
+    background: url('assets/images/icon-arrow.svg');
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--Purple);
+    width: 100%;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    border: none;
+    padding: 30px;
+    position: relative;
+    bottom: -70px;
+    /* right: 50px; */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+.form-btn:hover{
+    background-color: var(--Off-black);
+}
+.error-msg{
+    color: var(--Light-red);
+    font-family: 'Poppins-italic',sans-serif ;
+    font-size: 10px;
+    /* width: 100px; */
+    width: 110% ;
+    padding-top:8px ;
+    height: 25px;
+}
+.results h1{
+    font-size: 4rem;
+    font-family:'Poppins-ExtraBoldItalics',sans-serif ;
+}
+.results span{
+    color: var(--Purple);
+}
+footer{
+    background-color: var(--Purple);
+    height: 50%;
+    width: 100%;
+    padding: 1rem;
+    text-decoration: none;
+}
+.attribution{
+    text-decoration: none;
+    color: var(--Light-grey);
+    font-family:'Poppins-regular',sans-serif ;
+    text-align: center;
+
+}
+.attribution a{
+    text-decoration: none;
+    color: #0000EE;
+
+}
+@media(max-width:679px){
+    .container{
+        width: 90%;
+    }
+    #form{
+        flex-direction: column;
+        gap: 0;
+        
+    }
+    .form-btn{
+        bottom: -55px;
+    }
+    
+    .results{
+        padding-top: 20px;
+    }
+
+    
+}
+@media(max-width:549px){
+    .results h1{
+        font-size: 3rem;
+    }
+    /* #form{
+        padding-bottom: 0;
+    } */
+    .input-box input{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:349px){
+    .results h1{
+        font-size: 2rem;
+    }
+    .row{
+        gap: 1rem;
+    }
+}
