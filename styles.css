@@ -106,7 +106,6 @@ input[type="number"]::-webkit-outer-spin-button{
 }
 #form{
     display: flex;
-    /* justify-content: space-between; */
     gap: 1rem;
     align-items: center;
     padding-bottom: 25px;
@@ -133,7 +132,6 @@ input[type="number"]::-webkit-outer-spin-button{
     padding: 30px;
     position: relative;
     bottom: -70px;
-    /* right: 50px; */
     cursor: pointer;
     transition: background-color 0.2s ease-in;
 }
@@ -144,7 +142,6 @@ input[type="number"]::-webkit-outer-spin-button{
     color: var(--Light-red);
     font-family: 'Poppins-italic',sans-serif ;
     font-size: 10px;
-    /* width: 100px; */
     width: 110% ;
     padding-top:8px ;
     height: 25px;
@@ -200,9 +197,6 @@ footer{
     .results h1{
         font-size: 3rem;
     }
-    /* #form{
-        padding-bottom: 0;
-    } */
     .input-box input{
         font-size: 16px;
     }

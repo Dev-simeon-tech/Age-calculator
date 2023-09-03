@@ -12,20 +12,19 @@ const formInp = document.getElementById('form')
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
     dateValidation();
-    if(dateValidation()=== true){
+    if(dateValidation() === true){
         ageCalculate();
     }
 })
 const setPass = (element)=>{
     const inputBox = element.parentElement;
     const errorMsg = inputBox.querySelector('.error-msg')
-    errorMsg.innerText = ''
+    errorMsg.innerText = '';
     const input = inputBox.querySelector('.input')
-    input.style.border = 'none';
+    input.style.border = '1px solid hsl(0, 0%, 86%)';
     const label = inputBox.querySelector('.label')
     label.style.color = 'hsl(0, 1%, 44%)'
-    // isValid = true;
-    // return isValid
+   
     
 }
 
@@ -37,9 +36,7 @@ const setError = (element,message)=>{
     input.style.border = '1px solid hsl(0, 100%, 67%)';
     const label = inputBox.querySelector('.label')
     label.style.color = 'hsl(0, 100%, 67%)'
-    // element.style.classList.toggle('error')
-    // isValid = false;
-    // return isValid
+    
 }
 const dateValidation = ()=>{
     // validation for day
